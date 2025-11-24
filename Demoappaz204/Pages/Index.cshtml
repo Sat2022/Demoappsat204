@@ -1,10 +1,296 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page for AZ-204 cert.";
+    ViewData["Title"] = "Modern E-Commerce Store";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome Kumar  to AZ 204 Certification</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="hero-banner banner-1">
+                <div class="carousel-caption">
+                    <h1 class="display-3 fw-bold">Summer Collection 2025</h1>
+                    <p class="lead mb-4">Discover the hottest trends of the season</p>
+                    <button class="btn btn-light btn-lg px-5">Shop Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="hero-banner banner-2">
+                <div class="carousel-caption">
+                    <h1 class="display-3 fw-bold">Up to 50% Off</h1>
+                    <p class="lead mb-4">Limited time offers on selected items</p>
+                    <button class="btn btn-warning btn-lg px-5">View Deals</button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="hero-banner banner-3">
+                <div class="carousel-caption">
+                    <h1 class="display-3 fw-bold">New Arrivals</h1>
+                    <p class="lead mb-4">Fresh styles just landed in store</p>
+                    <button class="btn btn-primary btn-lg px-5">Explore</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
+
+<!-- Categories Section -->
+<section class="mb-5">
+    <div class="container-fluid px-0">
+        <h2 class="text-center mb-4 fw-bold">Shop by Category</h2>
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span class="category-icon">👔</span>
+                    </div>
+                    <h5 class="text-center mt-3">Men's Fashion</h5>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <span class="category-icon">👗</span>
+                    </div>
+                    <h5 class="text-center mt-3">Women's Fashion</h5>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <span class="category-icon">📱</span>
+                    </div>
+                    <h5 class="text-center mt-3">Electronics</h5>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <span class="category-icon">🏠</span>
+                    </div>
+                    <h5 class="text-center mt-3">Home & Living</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products -->
+<section class="mb-5">
+    <div class="container-fluid px-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold">Featured Products</h2>
+            <a href="#" class="text-decoration-none">View All →</a>
+        </div>
+        <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Premium Wireless Headphones</h5>
+                        <p class="product-description">High-quality sound with noise cancellation</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$299.99</span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-badge sale">Sale</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Smart Watch Series 5</h5>
+                        <p class="product-description">Track your fitness goals with style</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$199.99 <small class="text-muted"><s>$249.99</s></small></span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Designer Leather Bag</h5>
+                        <p class="product-description">Handcrafted genuine leather</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$159.99</span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-badge">Hot</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Running Shoes Pro</h5>
+                        <p class="product-description">Comfort meets performance</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$129.99</span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Vintage Sunglasses</h5>
+                        <p class="product-description">UV protection with classic style</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$79.99</span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-badge sale">-30%</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Bluetooth Speaker</h5>
+                        <p class="product-description">Portable with powerful bass</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$69.99 <small class="text-muted"><s>$99.99</s></small></span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #fee140 0%, #fa709a 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Yoga Mat Premium</h5>
+                        <p class="product-description">Non-slip eco-friendly material</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$49.99</span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Coffee Maker Deluxe</h5>
+                        <p class="product-description">Brew barista-quality coffee at home</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$189.99</span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Promotional Banner -->
+<section class="mb-5">
+    <div class="promo-banner">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h2 class="display-4 fw-bold text-white mb-3">🎉 Mega Sale - Up to 70% Off!</h2>
+                <p class="lead text-white mb-4">Limited time offer! Subscribe now and get an extra 10% discount code instantly</p>
+                <div class="input-group mb-3" style="max-width: 500px;">
+                    <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+                    <button class="btn btn-light btn-lg" type="button">Subscribe</button>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="promo-icon">🎁</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Best Sellers -->
+<section class="mb-5">
+    <div class="container-fluid px-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold">Best Sellers</h2>
+            <a href="#" class="text-decoration-none">View All →</a>
+        </div>
+        <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Wireless Keyboard</h5>
+                        <p class="product-description">Ergonomic design for productivity</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$89.99</span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Gaming Mouse</h5>
+                        <p class="product-description">Precision control for gamers</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$59.99</span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Travel Backpack</h5>
+                        <p class="product-description">Spacious and durable</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$119.99</span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="product-info">
+                        <h5 class="product-title">Desk Lamp LED</h5>
+                        <p class="product-description">Adjustable brightness levels</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">$44.99</span>
+                            <button class="btn btn-sm btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
