@@ -1,7 +1,8 @@
 name: Publish .NET package to GitHub Packages
 
 on:
-  push: main
+  push:
+   branches: [main]
 
 permissions: 
    contents: read
