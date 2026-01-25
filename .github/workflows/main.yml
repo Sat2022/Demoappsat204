@@ -1,9 +1,11 @@
 name: Starter Pipeline
 
-on:
-  branches: 
-    - master
+on: push
 
 jobs:
   test:
-    run: echo "Hello World!"
+    runs-on: ubuntu-latest
+    steps:
+      run: echo "Hello World!" > demo.txt
+
+      run: cat demo.txt
