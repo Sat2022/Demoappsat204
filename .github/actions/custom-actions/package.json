@@ -1,0 +1,7 @@
+{
+    "name": "custom-actions",
+    "version": "1.0.0",
+    "description": "A custom GitHub Action for demonstration purposes",
+    "main": "index.js",
+    "license": "MIT"
+}

@@ -1,0 +1,16 @@
+name: Custom .NET Build Action
+description: A custom GitHub Action to set up .NET, restore dependencies, and build a .NET application.
+
+inputs:
+  dotnet-version:
+    description: 'The version of .NET to set up'
+    required: true
+    default: '8.0'
+  project-path:
+    description: 'The path to the .NET project'
+    required: false
+    default: '.'
+
+runs:
+  using: node20
+  main: index.js

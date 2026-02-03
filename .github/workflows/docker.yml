@@ -31,3 +31,6 @@ jobs:
           push: true
 
           tags: ghcr.io/${{ github.repository_owner }}/demoappaz204:latest
+      
+      - name: Run Composite Action
+        uses: ./.github/actions/dotnet-build

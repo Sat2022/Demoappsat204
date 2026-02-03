@@ -16,8 +16,11 @@ jobs:
       - name: Run Composite Action
         uses: ./.github/actions/dotnet-build
       
+      - name: Run Custom action
+        uses: ./.github/actions/custom-actions
+
       - name: Publish artifact
-        run: dotnet publish 
+        run: dotnet publish --output ./bin/Release/net8.0/publish -c Release
 
       - name: List all files
         run: ls /home/runner/work/Demoappaz204/Demoappaz204/Demoappaz204/bin/Release/net8.0/publish/
