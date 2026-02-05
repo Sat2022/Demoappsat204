@@ -1,10 +1,12 @@
-name: Demo
+name: Starter Pipeline #Worflow name
 
-on: push
+on: push #trigger
 
-jobs:
+jobs: 
   test:
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-latest #runner
     steps:
-    - run: echo "Hello World!"
+      - name: Hello World Command
+        run: echo "Hello World!" > demo.txt
+        # use run to execute shell commands directly on the runner
+      - run: cat demo.txt
