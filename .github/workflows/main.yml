@@ -9,3 +9,9 @@ jobs:
       - run: echo "Hello World!"
       - run: ls -al
       - run: pwd
+      
+      - name: Checkout
+        uses: actions/Checkout@v6.0.2 code
+
+      - name: List all files
+        run: ls-al
