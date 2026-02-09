@@ -14,4 +14,4 @@ jobs:
         uses: actions/Checkout@v6.0.2
 
       - name: List all files
-        run: ls-al
+        run: ls -al
